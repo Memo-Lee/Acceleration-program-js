@@ -5,8 +5,7 @@ function User({name,surname,age,isLoggedIn,friends}) {
             <h1> 
                 {isLoggedIn ? `${name} ${surname} (${age})`: "Giriş yapmadınız."}
             </h1>
-            {
-                friends.map((friends) => (
+            {friends && friends.map((friends) => (
                     <div key={friends.id}>{friends.name}</div>
                 ))
             }
@@ -14,10 +13,10 @@ function User({name,surname,age,isLoggedIn,friends}) {
         ); 
     }
 User.propTypes = {
-    name : PropTypes.string,
-    surname : PropTypes.string,
-    isLoggedIn : PropTypes.bool,
-    age : PropTypes.number,
-    friends : PropTypes.array
+    name : PropTypes.string.isRequired,
+    surname : PropTypes.string.isRequired,
+    isLoggedIn : PropTypes.bool.isRequired,
+    age : PropTypes.number.isRequired,
+    friends : PropTypes.array.isRequired
 }
 export default User;
