@@ -1,9 +1,12 @@
 import PropTypes from "prop-types"; 
 function User({name,surname,age,isLoggedIn,friends,address}) {
+    if (!isLoggedIn) {
+        return <div>Giriş Yapmadınız...</div>
+    }
     return (
         <>
             <h1> 
-                {isLoggedIn ? `${name} ${surname} (${age})`: "Giriş yapmadınız."}
+                {`${name} ${surname} (${age})`}
             </h1>
 
             {address.title} {address.zip}
@@ -25,6 +28,11 @@ User.propTypes = {
     address : PropTypes.shape({
         title: PropTypes.string,
         zip : PropTypes.number
-    })
-}
+    }),
+};
+User.defaultProps = {
+    // app.js'den bir değer gönderilirse default alınmıyor.
+    name : 'İsimsiz',
+    isLoggedIn: false,
+};
 export default User;
