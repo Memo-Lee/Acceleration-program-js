@@ -7,6 +7,10 @@ function App() {
   const [age,setAge] = useState(19);
   const [friends,setFriends] = useState(["Ahmet", "Murat"]);
   const [address,setAddress] = useState({title:'Ankara',zip:2554})
+  const [form,setForm] = useState({name:"",surname:""});
+  const onChangeInput = (e) => {
+    setForm({...form,[e.target.name]:e.target.value});
+  }
   return (
     <div className="App">
       <h1>Merhaba {name}</h1>
@@ -32,10 +36,15 @@ function App() {
     <button onClick={()=> setAddress({...address , title:"Istanbul",zip:34500})}>
       New Address
     </button>
-    
-    
+    <hr/>
+    <br/>
+    <h2>InputExample</h2>
+    <input name="name" value={form.name} onChange={onChangeInput}></input>
+    <br/>
+    <input name="surname" value={form.surname} onChange={onChangeInput}></input>
+    <br/>
+    {form.name}{form.surname}
     </div>
-
   );
 }
 
