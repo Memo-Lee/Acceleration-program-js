@@ -1,12 +1,12 @@
 // 1. YONTEM' de function yazarak kullanıyorum.
-// function Topla(a,b) {
-//     return a+b;
-// }
+function Topla(a,b) {
+    return a+b;
+}
 
 // 2. YONTEM' de function yazmıyoruz fakat aynı işlemleri yapabiliyoruz.
-// const Topla = (a,b) => {
-//     return a + b;
-// }
+const Topla = (a,b) => {
+    return a + b;
+}
 
 // default yazdığımız da "import funtionName" şeklinde yanımlayabiliyoruz.
 // süslü parantez {} , içerisine almamıza gerek yok

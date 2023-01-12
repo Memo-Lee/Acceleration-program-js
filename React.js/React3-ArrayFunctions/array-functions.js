@@ -1,4 +1,4 @@
-/*
+
 const users = [
         {
             name : "Mehmet",
@@ -14,35 +14,34 @@ const users = [
         },
     ];
 
---push 
+//--push 
 users.push("ayşe");
 console.log(users);
 
---map
+//--map
 users.map((item)=>{
     console.log(item.name);
 });
 
---find
+//--find
 const result = users.find((item)=>
     item.name === "Mehmet" && item.age > 20);
     console.log(result);
 
---filter
+//--filter
 const filtered = users.filter(({name,age}) => name === "Mehmet" && age<20);
 console.log(filtered);
 
---some
+//--some
 const some = users.some((item)=> item.age === 11);
 console.log(some);
 
---every
+//--every
 const every = users.every((item)=> item.age > 5);
 console.log(every);
 
---includes
+//--includes
 const meyveler = ["elma","armut","muz"];
 const isIncluded = meyveler.includes("portakal");
 console.log(isIncluded);
 
-*/
