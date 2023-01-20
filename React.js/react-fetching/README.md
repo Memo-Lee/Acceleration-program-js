@@ -1,5 +1,14 @@
-# Fetching  
-**Herhangi bir kütüphane kullanmadan "fetch" metodu ile ilgili veri kaynağına erişebiliyoruz.**  
+| Fetching |
+| ------------- |
+| Herhangi bir kütüphane kullanmadan "fetch" metodu ile ilgili veri kaynağına erişebiliyoruz.|
+| String olarak gelen veriyi json formatında vermediği için json() formatına çeviriyoruz.|
+| Kısıtlı browser desteği|
+
+| Axios |
+| ------------- |
+| Fetch'in aksine bir kütüphanedir.|
+| Veri json formatında gelir.|
+| Geniş browser desteği|
 
 ## .then()  
 Promise beklenilen işlemi gerçekleştirdikten sonra yapılacak adımlar için .then() fonksiyonu çağırılır.  
