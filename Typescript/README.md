@@ -9,5 +9,11 @@ Enum (enumaration) : Bu yapı yazılım dilinde enum, enumaration ya da enum sab
 NOT: ES5 yapısında enum tanımlaması olmadığı için function olarak compile eder.  
   
 3- Type assertions  
-bir variable 'any' olarak tanımladıysanız daha sonra ona bir değişken atadığınızda o type'ın methotlarını kullanamazsınız. Bu sebepten dolayı '(<type>message).' şeklinde type'ını belirlemek lazım.
+bir variable 'any' olarak tanımladıysanız daha sonra ona bir değişken atadığınızda o type'ın methotlarını kullanamazsınız. Bu sebepten dolayı '(<type>message).' veya '(message as string).' şeklinde type'ını belirlemek lazım.  
+  
+4- Functions  
+Funtions da parametrelerin typelarını önceden '(a:number, b:number,c?:number)' belirleyebiliriz. Functionun resultunu önceden 'function():string' belirleyebiliriz. Funtionun birçok parametresini 'function(...a:number[])' ile bekleyebiliriz.  
+const getAverage = (): string => {return;} şeklinde yada geri dönüş beklenmiyor ise 'void' ile function oluşturabiliriz.
+
+
 
