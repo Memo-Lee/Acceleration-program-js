@@ -16,8 +16,12 @@ Funtions da parametrelerin typelarını önceden '(a:number, b:number,c?:number)
 const getAverage = (): string => {return;} şeklinde yada geri dönüş beklenmiyor ise 'void' ile function oluşturabiliriz.
   
 5- İnterfaces  
-TypeScript'deki interface, temelinde bir tip tanımından başka birşey değildir. class ve function'lar nesnelerin davranışlarını tanımlarken, interface'ler nesnelerin/objelerin tiplerini tanımlar şeklinde düşünebiliriz. Metotlara ya da functionların parametlerini tanımlayabiliyoruz. Üreteceğimiz bilgilerin imzasını taşıyor. Onların nasıl hareket etmesi gerektiğini,hangi özelliklere sahip olması gerektiğini tutan bir şema olarak düşünebiliriz. Bu şemadan bir nesne tanımlayabilmek için class'a çevirmemiz lazım.
+TypeScript'deki interface, temelinde bir tip tanımından başka birşey değildir. class ve function'lar nesnelerin davranışlarını tanımlarken, interface'ler nesnelerin/objelerin tiplerini tanımlar şeklinde düşünebiliriz. Metotlara ya da functionların parametlerini tanımlayabiliyoruz. Üreteceğimiz bilgilerin imzasını taşıyor. Onların nasıl hareket etmesi gerektiğini,hangi özelliklere sahip olması gerektiğini tutan bir şema olarak düşünebiliriz. Bu şemadan bir nesne tanımlayabilmek için class'a çevirmemiz lazım.  
   
-6- Class
+6- Class  
+İnterface içeren ts dosyasını compile ettiğimiz zaman, js dosyası içerisinde interface kavramlarını göremeyiz, görebilmemiz için class ile bir nesne oluşturmamız lazım. Class içerisinde istersek interface proplarını kullanabiliriz istersek class içerisinde özel proplar tanımlayabiliriz. Class içerisinde interface içerisindeki propları kullanmak için, "class ClassName implements İnterfaceName {}" implementi yapmamız lazım. Class yapısı bizim için bir obje üretmek için gerekli olan yapıyı bize sunuyor.  
+  
+7- Objects  
+' let ObjectName: Taxi = new Taxi();' veya 'let ObjectName = new Taxi();' obje tanımlamaları ile class içerisinde tanımlanan propları klonlayıp, oluşturduğumuz objeler üzerinde kullanabiliriz.  
 
 
