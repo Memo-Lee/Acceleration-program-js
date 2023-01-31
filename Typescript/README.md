@@ -14,6 +14,10 @@ bir variable 'any' olarak tanımladıysanız daha sonra ona bir değişken atad�
 4- Functions  
 Funtions da parametrelerin typelarını önceden '(a:number, b:number,c?:number)' belirleyebiliriz. Functionun resultunu önceden 'function():string' belirleyebiliriz. Funtionun birçok parametresini 'function(...a:number[])' ile bekleyebiliriz.  
 const getAverage = (): string => {return;} şeklinde yada geri dönüş beklenmiyor ise 'void' ile function oluşturabiliriz.
-
+  
+5- İnterfaces  
+TypeScript'deki interface, temelinde bir tip tanımından başka birşey değildir. class ve function'lar nesnelerin davranışlarını tanımlarken, interface'ler nesnelerin/objelerin tiplerini tanımlar şeklinde düşünebiliriz. Metotlara ya da functionların parametlerini tanımlayabiliyoruz. Üreteceğimiz bilgilerin imzasını taşıyor. Onların nasıl hareket etmesi gerektiğini,hangi özelliklere sahip olması gerektiğini tutan bir şema olarak düşünebiliriz. Bu şemadan bir nesne tanımlayabilmek için class'a çevirmemiz lazım.
+  
+6- Class
 
 
