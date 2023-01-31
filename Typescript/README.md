@@ -23,5 +23,10 @@ TypeScript'deki interface, temelinde bir tip tanımından başka birşey değild
   
 7- Objects  
 ' let ObjectName: Taxi = new Taxi();' veya 'let ObjectName = new Taxi();' obje tanımlamaları ile class içerisinde tanımlanan propları klonlayıp, oluşturduğumuz objeler üzerinde kullanabiliriz.  
+  
+8- Constructors  
+Objenin üretim aşamasında, alacağı değerleri constructor ile tanımlayabiliyoruz. 'this. ' ile üretilecek objeyi referans alarak, oluşturulurken değer vermesini sağlayabiliyoruz. örn: 'this.color = color;' this.color'a parametre olarak beklediğimiz colorı atıyoruz. 'color?:string' yöntemi ile parametre olarak göndereceğimiz string değerinin optional olmasını sağlıyoruz.  
+  
+9- 
 
 
