@@ -1,25 +1,41 @@
-import {useState,useEffect} from 'react'
+import { useState, useEffect } from 'react';
 import axios from 'axios'
-import {Link} from 'react-router-dom'
+import { NavLink, Outlet } from 'react-router-dom'
 function Users() {
-  const [users,setUsers] = useState([]); //boş array
-  useEffect(()=>{
-    axios()
-  },[]); 
+
+  const [loading, setLoading] = useState(true);
+  const [users, setUsers] = useState([]); //boş array
+  useEffect(() => {
+    axios("https://jsonplaceholder.typicode.com/users")
+      .then(res => setUsers(res.data))
+      .finally(() => setLoading(false));
+  }, []);
+
   return (
-    <div>
-      <h1>Users</h1>
-      <ul>
-        <li>
-            <Link to={'/user/1'}>User 1</Link>
-        </li>
-        <li>
-            <Link to={'/user/2'}>User 2</Link>
-        </li>
-        <li>
-            <Link to={'/user/3'}>User 3</Link>
-        </li>
-      </ul>
+    <div className='body'>
+
+      <div>
+        <h1>Users</h1>
+
+        {loading && <div>Loading...</div>}
+        <ul>
+          {!loading &&
+            users?.map((user) => (
+              <li key={user.id}>
+                <NavLink
+                  to={`/users/${user.id}`}
+                  style={({ isActive, isPending }) => {
+                    return {
+                      fontWeight: isActive ? "bold" : "",
+                      color: isPending ? "red" : "black",
+                    };
+                  }}>{user.name}</NavLink>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+      <Outlet />
     </div>
   )
 }

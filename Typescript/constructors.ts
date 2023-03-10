@@ -9,9 +9,9 @@ interface Vehicle {
 class Taxi implements Vehicle {
     // .. class'a ait özel prop ekleyebiliriz 
     color:string;
-    constructor(location?:Point,color?:string){
-        this.currentLocation = location;
-        this.color = color;
+    constructor( location?:Point, color?:string) {
+        this.currentLocation=location;
+        this.color=color;
     }
     currentLocation : Point;
     travelTo(point : Point): void{
